@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  {%block styles%}
+  {% bootstrap_css%}
+  {%endblock%}
+  <title>SafeSave</title>
+</head>
+
+<body>
+  {%block content%}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel" style="background-color:#372746;color:white;">
+
+          <div class="panel-heading">
+            <h2 class="text-center" style="font-family: 'Pacifico',cursive;"> Safe Save</h2>
+          </div>
+          <div class="panel-body">
+
+            <form action="{% url 'finance'%}" method="post">
+              {% csrf_token %}
+              {% bootstrap_form form%}
+
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-sm" value="Calculate finance">
+              </div>
+
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+
+</html>
