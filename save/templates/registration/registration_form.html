@@ -1,0 +1,63 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  {%block styles%}
+  {% bootstrap_css %}
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  {%endblock%}
+  <title></title>
+</head>
+
+<body style="background-color:#241234">
+  {% block content %}
+  <div class="container">
+    <br>
+    <br>
+    <div class="row">
+      <!-- Empty div -->
+      <div class="col-md-4"></div>
+      <div class="col-md-5" style="height:500px;">
+        {% if form.errors %}
+        <p> Some Information Might be Incorrect </p>
+        {% endif %}
+        <div class="panel" style=" background-color:#372746;color:white;">
+
+          <div class="panel-heading">
+            <h2 class="text-center" style="font-family: 'Pacifico',cursive;">Safe Save</h2>
+            <h3 class="text-center">Sign Up</h3>
+          </div>
+          <div class="panel-body">
+
+            <form action="/accounts/register/" method="post">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+              </div>
+
+              <input type="hidden" name="next" value="{{next}}">
+
+            </form>
+            <p class="text-center" style="font-weight:bolder;">If you have an account, <br> <a href="/accounts/login/">Sign in</a> </p>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- empty div -->
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
+  {% endblock %}
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock %}
+</body>
+
+</html>
