@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  {%block styles%}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  {% endblock%}
+  <title></title>
+</head>
+
+<body style="background-color: #241234;">
+  {%block content%}
+  {{block.super}}
+<div class="container-fluid">
+    <br>
+    <br>
+    <br>
+    <br>
+    <blockquote>
+      <p style="color:white;font-size:20px;"> Welcome to Safe Save <br>Where you can save for future investments</p>
+    </blockquote>
+    <br>
+    <div class="row" align="center">
+        <img src="https://images.unsplash.com/photo-1514108225820-2b602873ac36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" height=400px width=333px>
+        <img src="https://images.unsplash.com/photo-1527788263495-3518a5c1c42d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height=400px width=333px>
+        <br>
+        <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height=400px width=333px>
+        <img src="https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" height=400px width=333px>
+      </div>
+    </div>
+  {%endblock%}
+</body>
+
+</html>
