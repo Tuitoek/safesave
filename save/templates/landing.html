@@ -1,0 +1,48 @@
+{%load bootstrap3%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  {%block styles%}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  {% endblock%}
+  <title>Safe save</title>
+</head>
+
+<body style="background-color:#241234;color:white;">
+  {%block content%}
+  <div class="container-fluid">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <i style="color:white;font-size:200px;display:flex;justify-content:center;" class="glyphicon glyphicon-piggy-bank"></i>
+    <h2  style="font-family: 'Pacifico',cursive;" align="center"> Safe Save</h2>
+    <br>
+    <br>
+    <p align="center">Welcome to Safe Save.<br> The best saving website in the market. <br>Let's get started</p>
+     <br>
+     <br>
+     <br>
+     <div style="display:flex;justify-content:center;">
+      <a href="/accounts/login"> <button class="btn btn-default" type="button" name="button"> Get Started</button></a>
+     </div>
+
+
+  </div>
+  {%endblock%}
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock %}
+</body>
+
+</html>
